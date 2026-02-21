@@ -1,0 +1,68 @@
+import type { Review } from '@/types'
+
+export const reviews: Review[] = [
+  {
+    id: '1',
+    author: 'John M.',
+    rating: 5,
+    date: 'Verified Yelp Review',
+    text: 'John Grady has put together one of the best teams I\'ve ever worked with. He is a wonderful guy who goes out of his way to make sure all of his guests have a great experience when being transported. Highly recommend for reliable service, great vehicular selection, and a great team to work with.',
+    service: 'Corporate Travel',
+  },
+  {
+    id: '2',
+    author: 'Sarah K.',
+    rating: 5,
+    date: 'October 2024',
+    text: 'Used Greater Boston Livery for our daughter\'s wedding. The whole experience was flawless — immaculate vehicles, impeccably dressed chauffeurs, and they coordinated the entire wedding party without a single hitch. Worth every penny.',
+    service: 'Wedding',
+  },
+  {
+    id: '3',
+    author: 'David R.',
+    rating: 5,
+    date: 'September 2024',
+    text: 'I\'ve been using them for corporate travel for two years now. The level of professionalism is unmatched in Boston. Drivers are always on time, the cars are spotless, and I can work in peace during my rides. Highly recommend.',
+    service: 'Corporate',
+  },
+  {
+    id: '4',
+    author: 'Jennifer M.',
+    rating: 5,
+    date: 'August 2024',
+    text: 'Booked the Sprinter for a group airport pickup — 10 people, multiple flights. They tracked all the flights and adjusted pickup times seamlessly. The vehicle was gorgeous inside. Everyone in the group was impressed.',
+    service: 'Group Transfer',
+  },
+  {
+    id: '5',
+    author: 'Robert C.',
+    rating: 5,
+    date: 'July 2024',
+    text: 'Our anniversary dinner required a special touch and Greater Boston Livery delivered. The Escalade was pristine, the chauffeur professional and discreet, and they even had a small bouquet of flowers waiting inside. Exceptional attention to detail.',
+    service: 'Special Occasion',
+  },
+  {
+    id: '6',
+    author: 'Amanda L.',
+    rating: 5,
+    date: 'June 2024',
+    text: 'Best car service in the Greater Boston area, period. I\'ve tried others and always come back. The vehicles are newer, cleaner, and the drivers are genuinely professional — not just someone with an app. This is real luxury transportation.',
+    service: 'Airport Transfer',
+  },
+  {
+    id: '7',
+    author: 'Thomas B.',
+    rating: 5,
+    date: 'May 2024',
+    text: 'Used them for a Foxwoods run with a group of friends. The stretch limo was incredible — fully stocked bar, great music, and a driver who knew exactly how to make the night special. Will absolutely book again.',
+    service: 'Entertainment',
+  },
+  {
+    id: '8',
+    author: 'Patricia W.',
+    rating: 5,
+    date: 'April 2024',
+    text: 'When my flight landed two hours late, my driver was still there waiting with a smile — no extra charges, no complaints. That kind of commitment to service is rare. Greater Boston Livery has earned a customer for life.',
+    service: 'Airport Transfer',
+  },
+]
