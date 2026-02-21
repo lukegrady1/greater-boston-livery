@@ -46,7 +46,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/gbl_logo.webp"
+              src={`${import.meta.env.BASE_URL}gbl_logo.webp`}
               alt="Greater Boston Livery"
               className="h-16 w-auto object-contain"
             />
