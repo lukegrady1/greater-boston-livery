@@ -177,17 +177,17 @@ export function Home() {
 
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-silver">
           {coreServices.map(({ icon: Icon, title, desc, href }) => (
-            <StaggerItem key={title}>
+            <StaggerItem key={title} className="h-full">
               <Link
                 to={href}
-                className="block p-8 border-r border-b border-silver hover:bg-navy group transition-colors duration-300 last:border-r-0"
+                className="flex flex-col h-full p-8 border-r border-b border-silver hover:bg-navy group transition-colors duration-300 last:border-r-0"
               >
                 <div className="w-10 h-10 border border-gold/30 flex items-center justify-center mb-6 group-hover:border-gold transition-colors">
                   <Icon size={18} className="text-gold" />
                 </div>
                 <h3 className="font-display text-lg text-navy group-hover:text-cream transition-colors mb-3">{title}</h3>
                 <p className="font-body text-sm text-navy/60 group-hover:text-silver/60 transition-colors leading-relaxed">{desc}</p>
-                <div className="flex items-center gap-1 mt-6 text-gold text-xs tracking-widest uppercase font-medium">
+                <div className="flex items-center gap-1 mt-auto pt-6 text-gold text-xs tracking-widest uppercase font-medium">
                   Learn more <ArrowRight size={11} />
                 </div>
               </Link>
