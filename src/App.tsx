@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { CustomCursor } from '@/components/ui/CustomCursor'
 import { Home } from '@/pages/Home'
 import { Fleet } from '@/pages/Fleet'
@@ -34,6 +35,7 @@ function AnimatedRoutes() {
 function Layout() {
   return (
     <div className="relative min-h-screen">
+      <ScrollToTop />
       <NoiseOverlay />
       <CustomCursor />
       <Navbar />
