@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
+  base: '/greater-boston-livery/',
   plugins: [react()],
   resolve: {
     alias: {
