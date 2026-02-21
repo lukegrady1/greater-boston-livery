@@ -59,7 +59,7 @@ function HeroSection() {
           </motion.p>
 
           {/* Main heading — staggered word reveal */}
-          <h1 className="font-display text-6xl md:text-7xl lg:text-8xl text-cream font-medium leading-none mb-4">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-cream font-medium leading-none mb-4">
             {titleWords.map((word, wi) => (
               <span key={word} className="block overflow-hidden pb-4">
                 <motion.span
@@ -118,7 +118,7 @@ function HeroSection() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6 }}

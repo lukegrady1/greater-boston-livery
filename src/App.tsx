@@ -32,12 +32,16 @@ function AnimatedRoutes() {
   )
 }
 
+// Only show custom cursor on devices with a fine pointer (mouse/trackpad), not touchscreens
+const hasFinePointer =
+  typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches
+
 function Layout() {
   return (
     <div className="relative min-h-screen">
       <ScrollToTop />
       <NoiseOverlay />
-      <CustomCursor />
+      {hasFinePointer && <CustomCursor />}
       <Navbar />
       <main>
         <AnimatedRoutes />
