@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Wifi, Users, Wine } from 'lucide-react'
@@ -113,6 +113,12 @@ function VehicleDetailCard({ vehicle }: { vehicle: Vehicle }) {
 
 export function Fleet() {
   const [active, setActive] = useState<Category>('all')
+  const gridRef = useRef<HTMLElement>(null)
+
+  function selectCategory(value: Category) {
+    setActive(value)
+    gridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   const filtered = active === 'all'
     ? vehicles
@@ -155,7 +161,7 @@ export function Fleet() {
             {categories.map(({ value, label }) => (
               <button
                 key={value}
-                onClick={() => setActive(value)}
+                onClick={() => selectCategory(value)}
                 className={cn(
                   'font-body text-sm px-5 py-2 transition-all duration-200 whitespace-nowrap',
                   active === value
@@ -171,7 +177,7 @@ export function Fleet() {
       </section>
 
       {/* Grid */}
-      <section className="section-padding py-16 bg-cream">
+      <section ref={gridRef} className="section-padding py-16 bg-cream scroll-mt-36">
         <AnimatePresence mode="wait">
           <StaggerChildren
             key={active}
