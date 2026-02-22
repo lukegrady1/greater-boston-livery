@@ -37,7 +37,7 @@ function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1800&q=90"
+          src={`${import.meta.env.BASE_URL}boston.PNG`}
           alt="Boston city skyline at night"
           className="w-full h-full object-cover"
         />
