@@ -1,5 +1,12 @@
 import { useState, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
+import {
+  buildBreadcrumbSchema,
+  schemaToString,
+  SITE_URL,
+  BUSINESS_NAME,
+  BOOKING_URL,
+} from '@/utils/seo'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Wifi, Users, Wine } from 'lucide-react'
 import { PageTransition } from '@/components/motion/PageTransition'
@@ -111,6 +118,39 @@ function VehicleDetailCard({ vehicle }: { vehicle: Vehicle }) {
   )
 }
 
+const vehicleListSchema = schemaToString({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Greater Boston Livery Fleet',
+  description: 'Luxury chauffeured vehicles available in Greater Boston',
+  url: `${SITE_URL}/fleet`,
+  numberOfItems: vehicles.length,
+  itemListElement: vehicles.map((v, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Product',
+      name: v.name,
+      description: v.description,
+      image: v.image,
+      offers: {
+        '@type': 'Offer',
+        url: BOOKING_URL,
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        seller: { '@type': 'LocalBusiness', name: BUSINESS_NAME },
+      },
+    },
+  })),
+})
+
+const fleetBreadcrumb = schemaToString(
+  buildBreadcrumbSchema([
+    { name: 'Home', href: '/' },
+    { name: 'Fleet', href: '/fleet' },
+  ])
+)
+
 export function Fleet() {
   const [active, setActive] = useState<Category>('all')
   const gridRef = useRef<HTMLElement>(null)
@@ -127,8 +167,16 @@ export function Fleet() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Our Fleet | Greater Boston Livery</title>
-        <meta name="description" content="Browse Greater Boston Livery's full fleet: luxury sedans, SUVs, Mercedes Sprinters, mini coaches, motor coaches, party buses, and limousines." />
+        <title>Luxury Fleet | Sedans, SUVs, Sprinters &amp; Limos | Greater Boston Livery</title>
+        <meta name="description" content="Browse Greater Boston Livery's luxury fleet: executive sedans, SUVs, Mercedes Sprinters, mini coaches, 55-passenger motor coaches, party buses, and stretch limousines. Available 24/7 in Boston." />
+        <link rel="canonical" href={`${SITE_URL}/fleet`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_URL}/fleet`} />
+        <meta property="og:title" content="Our Luxury Fleet | Greater Boston Livery" />
+        <meta property="og:description" content="Browse our full fleet: sedans, SUVs, Mercedes Sprinters, motor coaches, and stretch limousines. Available 24/7 throughout Greater Boston." />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <script type="application/ld+json">{vehicleListSchema}</script>
+        <script type="application/ld+json">{fleetBreadcrumb}</script>
       </Helmet>
 
       {/* Hero */}

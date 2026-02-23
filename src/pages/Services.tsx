@@ -1,5 +1,11 @@
 import { useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
+import {
+  buildServiceSchema,
+  buildBreadcrumbSchema,
+  schemaToString,
+  SITE_URL,
+} from '@/utils/seo'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Check } from 'lucide-react'
@@ -17,6 +23,7 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
 
   return (
     <div
+      id={service.id}
       ref={ref}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[70vh] ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}
     >
@@ -67,12 +74,33 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
   )
 }
 
+const serviceListSchema = schemaToString(
+  buildServiceSchema(
+    services.map((s) => ({ name: s.title, description: s.description, id: s.id }))
+  )
+)
+
+const servicesBreadcrumb = schemaToString(
+  buildBreadcrumbSchema([
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+  ])
+)
+
 export function Services() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Services | Greater Boston Livery</title>
-        <meta name="description" content="Greater Boston Livery offers airport transfers, corporate travel, wedding transportation, roadshows, and special occasion services throughout New England." />
+        <title>Airport Transfers, Corporate &amp; Wedding Transportation | Greater Boston Livery</title>
+        <meta name="description" content="Greater Boston Livery provides airport car service at Logan, Manchester &amp; T.F. Green, corporate chauffeur service, wedding transportation, roadshows, and special occasions throughout New England." />
+        <link rel="canonical" href={`${SITE_URL}/services`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_URL}/services`} />
+        <meta property="og:title" content="Chauffeured Services | Greater Boston Livery" />
+        <meta property="og:description" content="Airport transfers at Logan, Manchester &amp; T.F. Green, corporate travel, weddings, roadshows, and special occasions throughout Greater Boston and New England." />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <script type="application/ld+json">{serviceListSchema}</script>
+        <script type="application/ld+json">{servicesBreadcrumb}</script>
       </Helmet>
 
       {/* Hero */}

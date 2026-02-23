@@ -1,10 +1,19 @@
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Phone, Mail, MapPin, Clock } from 'lucide-react'
+import {
+  buildLocalBusinessSchema,
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+  schemaToString,
+  SITE_URL,
+  PHONE_DISPLAY,
+  BOOKING_URL,
+} from '@/utils/seo'
 import { PageTransition } from '@/components/motion/PageTransition'
 import { RevealOnScroll } from '@/components/motion/RevealOnScroll'
 import { StaggerChildren, StaggerItem } from '@/components/motion/StaggerChildren'
 
-const MOOVS_URL = 'https://customer.moovs.app/greater-boston-coach/request/new'
+const MOOVS_URL = BOOKING_URL
 
 const contactDetails = [
   {
@@ -37,12 +46,69 @@ const contactDetails = [
   },
 ]
 
+const contactLocalBusiness = schemaToString(buildLocalBusinessSchema())
+
+const contactPageSchema = schemaToString({
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Greater Boston Livery',
+  url: `${SITE_URL}/contact`,
+  description: 'Book a premium chauffeured ride or contact Greater Boston Livery directly.',
+  mainEntity: { '@type': 'LocalBusiness', '@id': `${SITE_URL}/#business` },
+})
+
+const faqSchema = schemaToString(
+  buildFaqSchema([
+    {
+      question: 'How do I book a ride with Greater Boston Livery?',
+      answer: `You can book instantly online at ${BOOKING_URL} or call us at ${PHONE_DISPLAY}. We respond to all inquiries within one hour.`,
+    },
+    {
+      question: 'What airports does Greater Boston Livery serve?',
+      answer: 'We provide meet-and-greet chauffeur service at Logan International Airport (BOS), Manchester-Boston Regional Airport (MHT), and T.F. Green Airport (PVD) in Providence.',
+    },
+    {
+      question: 'Does Greater Boston Livery offer corporate accounts?',
+      answer: 'Yes. We offer dedicated corporate accounts with monthly invoicing, priority scheduling, and a dedicated fleet for executive travel throughout New England.',
+    },
+    {
+      question: 'How far in advance should I book a limo or chauffeured vehicle?',
+      answer: 'We recommend booking 48 hours in advance for standard trips. For weddings, proms, and large group events, we recommend booking 4–6 weeks ahead to ensure vehicle availability.',
+    },
+    {
+      question: 'Do your vehicles have WiFi?',
+      answer: 'Several vehicles in our fleet include complimentary WiFi, including the Mercedes-Benz Sprinter Van and the 36 Passenger Mini Coach. WiFi availability is listed on each vehicle on our Fleet page.',
+    },
+    {
+      question: 'Is Greater Boston Livery the same as Greater Boston Coach?',
+      answer: 'Yes. Greater Boston Livery was formerly known as Greater Boston Coach. We rebranded to reflect our expanded fleet and elevated service standard. Our team, ownership, and commitment to excellence remain the same since 2008.',
+    },
+  ])
+)
+
+const contactBreadcrumb = schemaToString(
+  buildBreadcrumbSchema([
+    { name: 'Home', href: '/' },
+    { name: 'Contact', href: '/contact' },
+  ])
+)
+
 export function Contact() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Book a Ride | Greater Boston Livery</title>
-        <meta name="description" content="Reserve your premium chauffeured ride with Greater Boston Livery. Book online instantly or call 1-855-GB-LIMO." />
+        <title>Book a Ride | Contact Greater Boston Livery | (855) 425-4661</title>
+        <meta name="description" content="Reserve your premium chauffeured ride with Greater Boston Livery. Book online instantly or call 1-855-GB-LIMO (855) 425-4661. Airport transfers, corporate travel, and weddings throughout Boston and New England." />
+        <link rel="canonical" href={`${SITE_URL}/contact`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_URL}/contact`} />
+        <meta property="og:title" content="Book a Ride | Greater Boston Livery" />
+        <meta property="og:description" content="Book online or call (855) 425-4661. Airport transfers, corporate travel, weddings, and special occasions — available 24/7 in Greater Boston." />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <script type="application/ld+json">{contactLocalBusiness}</script>
+        <script type="application/ld+json">{contactPageSchema}</script>
+        <script type="application/ld+json">{faqSchema}</script>
+        <script type="application/ld+json">{contactBreadcrumb}</script>
       </Helmet>
 
       <div className="min-h-screen bg-navy">

@@ -1,5 +1,12 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import {
+  buildLocalBusinessSchema,
+  buildWebSiteSchema,
+  buildBreadcrumbSchema,
+  schemaToString,
+  SITE_URL,
+} from '@/utils/seo'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Shield, Clock, Star, Phone, Plane, Briefcase, Heart, MapPin } from 'lucide-react'
 import { PageTransition } from '@/components/motion/PageTransition'
@@ -134,12 +141,29 @@ function HeroSection() {
   )
 }
 
+const localBusinessSchema = schemaToString(buildLocalBusinessSchema())
+const webSiteSchema = schemaToString(buildWebSiteSchema())
+const breadcrumbSchema = schemaToString(buildBreadcrumbSchema([{ name: 'Home', href: '/' }]))
+
 export function Home() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Greater Boston Livery | Premium Chauffeured Transportation</title>
-        <meta name="description" content="Greater Boston Livery offers premier chauffeured transportation for airport transfers, corporate travel, weddings and events throughout Greater Boston and New England." />
+        <title>Greater Boston Livery | Premium Chauffeured Transportation Boston</title>
+        <meta name="description" content="Greater Boston Livery offers premier chauffeured transportation for airport transfers, corporate travel, weddings and events throughout Greater Boston and New England. Call (855) 425-4661." />
+        <link rel="canonical" href={`${SITE_URL}/`} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_URL}/`} />
+        <meta property="og:title" content="Greater Boston Livery | Premium Chauffeured Transportation" />
+        <meta property="og:description" content="Premier chauffeured transportation for airport transfers, corporate travel, weddings and events throughout Greater Boston and New England." />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Greater Boston Livery" />
+        <script type="application/ld+json">{localBusinessSchema}</script>
+        <script type="application/ld+json">{webSiteSchema}</script>
+        <script type="application/ld+json">{breadcrumbSchema}</script>
       </Helmet>
 
       <HeroSection />
