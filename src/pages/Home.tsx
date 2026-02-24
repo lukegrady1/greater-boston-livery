@@ -261,7 +261,7 @@ export function Home() {
 
           <RevealOnScroll direction="right" delay={0.2}>
             <div className="relative">
-              <div className="w-full aspect-[4/5] bg-navy/5 border border-silver flex items-center justify-center">
+              <div className="w-full aspect-[4/5] bg-cream/10 border border-white/20 flex items-center justify-center">
                 <img
                   src={`${import.meta.env.BASE_URL}gbl_logo.webp`}
                   alt="Greater Boston Livery"
