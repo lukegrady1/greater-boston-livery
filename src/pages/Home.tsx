@@ -253,7 +253,7 @@ export function Home() {
               </p>
             </div>
             <div className="mt-8">
-              <Link to="/contact" className="btn-outline">
+              <Link to="/team" className="btn-outline">
                 Meet the Team <ArrowRight size={14} />
               </Link>
             </div>
