@@ -101,7 +101,7 @@ function HeroSection() {
 
           {/* CTAs */}
           <motion.div
-            className="flex flex-wrap items-center gap-4"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
@@ -110,12 +110,12 @@ function HeroSection() {
               href="https://customer.moovs.app/greater-boston-coach/request/new"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto justify-center"
             >
               Reserve Your Ride
               <ArrowRight size={14} />
             </a>
-            <a href="tel:+18554254661" className="btn-outline">
+            <a href="tel:+18554254661" className="btn-outline w-full sm:w-auto justify-center">
               <Phone size={14} />
               Call (855) 425-4661
             </a>
@@ -342,16 +342,16 @@ export function Home() {
           <p className="font-body text-navy/60 max-w-lg mx-auto mb-10">
             Available 24 hours a day, 7 days a week. Reservations, last-minute bookings, and corporate accounts welcome.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
             <a
               href="https://customer.moovs.app/greater-boston-coach/request/new"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto justify-center"
             >
               Book a Ride <ArrowRight size={14} />
             </a>
-            <a href="tel:+18554254661" className="btn-outline">
+            <a href="tel:+18554254661" className="btn-outline w-full sm:w-auto justify-center">
               <Phone size={14} />
               (855) 425-4661
             </a>
