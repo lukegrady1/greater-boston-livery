@@ -15,19 +15,18 @@ import { PageTransition } from '@/components/motion/PageTransition'
 import { RevealOnScroll } from '@/components/motion/RevealOnScroll'
 import { StaggerChildren, StaggerItem } from '@/components/motion/StaggerChildren'
 import { services } from '@/data/services'
-import { cn } from '@/utils/cn'
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="border-b border-silver last:border-b-0">
+    <div className="border-b border-white/10 last:border-b-0">
       <button
         className="w-full flex items-center justify-between py-5 text-left gap-4"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
       >
-        <span className="font-display text-base text-navy">{question}</span>
+        <span className="font-display text-base text-cream">{question}</span>
         <motion.div
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.25 }}
@@ -45,7 +44,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <p className="font-body text-sm text-navy/60 leading-relaxed pb-5">{answer}</p>
+            <p className="font-body text-sm text-silver/60 leading-relaxed pb-5">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
