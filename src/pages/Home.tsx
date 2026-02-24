@@ -261,12 +261,13 @@ export function Home() {
 
           <RevealOnScroll direction="right" delay={0.2}>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80"
-                alt="Professional chauffeur with luxury vehicle"
-                loading="lazy"
-                className="w-full aspect-[4/5] object-cover"
-              />
+              <div className="w-full aspect-[4/5] bg-navy/5 border border-silver flex items-center justify-center">
+                <img
+                  src={`${import.meta.env.BASE_URL}gbl_logo.webp`}
+                  alt="Greater Boston Livery"
+                  className="w-2/3 object-contain"
+                />
+              </div>
               {/* Gold accent frame */}
               <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border border-gold/20 -z-10" />
               {/* Stat callout */}
