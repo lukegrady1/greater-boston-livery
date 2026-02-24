@@ -88,7 +88,7 @@ function VehicleDetailCard({ vehicle }: { vehicle: Vehicle }) {
           {vehicle.alcoholFriendly && (
             <div className="flex items-center gap-2 border border-silver px-3 py-2">
               <Wine size={14} className="text-gold" />
-              <span className="font-body text-sm text-navy font-medium">Alcohol OK</span>
+              <span className="font-body text-sm text-navy font-medium">Alcohol Friendly</span>
             </div>
           )}
         </div>
