@@ -17,6 +17,10 @@ export interface Service {
   icon: string
   image: string
   features: string[]
+  longDescription?: string[]
+  faqs?: { question: string; answer: string }[]
+  metaTitle?: string
+  metaDescription?: string
 }
 
 export interface Review {

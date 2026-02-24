@@ -8,6 +8,7 @@ import {
 } from '@/utils/seo'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { ArrowRight, Check } from 'lucide-react'
 import { PageTransition } from '@/components/motion/PageTransition'
 import { RevealOnScroll } from '@/components/motion/RevealOnScroll'
@@ -59,14 +60,12 @@ function ServiceBlock({ service, index }: { service: typeof services[0]; index: 
               ))}
             </ul>
 
-            <a
-              href="https://customer.moovs.app/greater-boston-coach/request/new"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={`/services/${service.id}`}
               className="btn-primary"
             >
-              Book This Service <ArrowRight size={14} />
-            </a>
+              Learn More <ArrowRight size={14} />
+            </Link>
           </RevealOnScroll>
         </div>
       </div>
