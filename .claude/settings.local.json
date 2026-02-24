@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo PROMPT_NEEDED:*)",
+      "Bash(cd /c/Users/lukeg/greater-boston-livery/greater-boston-livery && echo \"y\" | npm create vite@latest . -- --template react-ts 2>&1)",
+      "Bash(cd /c/Users/lukeg/greater-boston-livery/greater-boston-livery && npm install 2>&1)",
+      "Bash(cd /c/Users/lukeg/greater-boston-livery/greater-boston-livery && npm run build 2>&1)",
+      "Bash(cd /c/Users/lukeg/greater-boston-livery/greater-boston-livery && npm install -D @types/node 2>&1)",
+      "WebFetch(domain:greaterbostonlivery.com)",
+      "WebFetch(domain:www.yelp.com)",
+      "WebSearch",
+      "WebFetch(domain:greaterbostoncoach.com)",
+      "Bash(cd:*)",
+      "Bash(cd /c/Users/lukeg/greater-boston-livery/greater-boston-livery && curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5175/ 2>&1)",
+      "Bash(echo Checking vehicle count via grep...:*)",
+      "Bash(pkill:*)",
+      "Bash(tail:*)",
+      "Bash(cd \"C:\\\\Users\\\\lukeg\\\\greater-boston-livery\\\\greater-boston-livery\" && npm run build 2>&1)",
+      "Bash(cd C:\\\\Users\\\\lukeg\\\\greater-boston-livery\\\\greater-boston-livery:*)",
+      "Bash(ls:*)",
+      "Bash(cd /c/Users/lukeg/client-websites/greater-boston-livery/greater-boston-livery && npx tsc --noEmit 2>&1)"
+    ]
+  }
+}

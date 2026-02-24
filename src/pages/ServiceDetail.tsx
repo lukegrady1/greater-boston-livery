@@ -101,7 +101,7 @@ export function ServiceDetail() {
         <meta property="og:url" content={`${SITE_URL}/services/${service.id}`} />
         <meta property="og:title" content={service.metaTitle ?? service.title} />
         <meta property="og:description" content={service.metaDescription ?? service.description} />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
         <script type="application/ld+json">{breadcrumbSchema}</script>
         <script type="application/ld+json">{serviceSchema}</script>
         {faqSchema && <script type="application/ld+json">{faqSchema}</script>}

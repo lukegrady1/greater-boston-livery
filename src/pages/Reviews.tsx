@@ -57,7 +57,7 @@ export function Reviews() {
         <meta property="og:url" content={`${SITE_URL}/reviews`} />
         <meta property="og:title" content={`${avgRating}-Star Reviews | Greater Boston Livery`} />
         <meta property="og:description" content={`${reviews.length} verified 5-star reviews from corporate executives, wedding couples, and travelers. Boston's premier chauffeured service.`} />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
         <script type="application/ld+json">{reviewSchema}</script>
         <script type="application/ld+json">{reviewsBreadcrumb}</script>
       </Helmet>

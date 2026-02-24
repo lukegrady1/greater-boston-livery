@@ -157,7 +157,7 @@ export function Home() {
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:title" content="Greater Boston Livery | Premium Chauffeured Transportation" />
         <meta property="og:description" content="Premier chauffeured transportation for airport transfers, corporate travel, weddings and events throughout Greater Boston and New England." />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Greater Boston Livery" />
@@ -261,9 +261,9 @@ export function Home() {
 
           <RevealOnScroll direction="right" delay={0.2}>
             <div className="relative">
-              <div className="w-full aspect-[4/5] bg-cream/10 border border-white/20 flex items-center justify-center">
+              <div className="w-full aspect-[4/5] bg-white flex items-center justify-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}gbl_logo.webp`}
+                  src={`${import.meta.env.BASE_URL}gbl_logo.PNG`}
                   alt="Greater Boston Livery"
                   className="w-2/3 object-contain"
                 />

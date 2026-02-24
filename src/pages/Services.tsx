@@ -97,7 +97,7 @@ export function Services() {
         <meta property="og:url" content={`${SITE_URL}/services`} />
         <meta property="og:title" content="Chauffeured Services | Greater Boston Livery" />
         <meta property="og:description" content="Airport transfers at Logan, Manchester &amp; T.F. Green, corporate travel, weddings, roadshows, and special occasions throughout Greater Boston and New England." />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
         <script type="application/ld+json">{serviceListSchema}</script>
         <script type="application/ld+json">{servicesBreadcrumb}</script>
       </Helmet>

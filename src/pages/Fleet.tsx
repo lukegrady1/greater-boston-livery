@@ -174,7 +174,7 @@ export function Fleet() {
         <meta property="og:url" content={`${SITE_URL}/fleet`} />
         <meta property="og:title" content="Our Luxury Fleet | Greater Boston Livery" />
         <meta property="og:description" content="Browse our full fleet: sedans, SUVs, Mercedes Sprinters, motor coaches, and stretch limousines. Available 24/7 throughout Greater Boston." />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.webp`} />
+        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
         <script type="application/ld+json">{vehicleListSchema}</script>
         <script type="application/ld+json">{fleetBreadcrumb}</script>
       </Helmet>
