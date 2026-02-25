@@ -7,7 +7,7 @@ interface ReviewCardProps {
 
 export function ReviewCard({ review }: ReviewCardProps) {
   return (
-    <div className="bg-white border border-silver p-8 flex flex-col gap-4">
+    <div className="bg-white border border-silver p-8 flex flex-col gap-4 h-full">
       {/* Stars */}
       <div className="flex items-center gap-1">
         {Array.from({ length: review.rating }).map((_, i) => (

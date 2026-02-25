@@ -325,7 +325,7 @@ export function Home() {
 
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {featuredReviews.map((review) => (
-            <StaggerItem key={review.id}>
+            <StaggerItem key={review.id} className="h-full">
               <ReviewCard review={review} />
             </StaggerItem>
           ))}
