@@ -13,7 +13,7 @@ export function VehicleCard({ vehicle, onClick }: VehicleCardProps) {
 
   return (
     <motion.div
-      className="group relative overflow-hidden bg-navy cursor-pointer aspect-[3/4]"
+      className="group relative overflow-hidden bg-navy cursor-pointer aspect-[4/3]"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={onClick}
