@@ -32,7 +32,7 @@ export const vehicles: Vehicle[] = [
     image: `${import.meta.env.BASE_URL}toyota_avalon_hybrid.PNG`,
     features: ['AC', 'AUX', 'Bluetooth', 'USB', 'Power Outlets', 'Hybrid'],
     description: 'Refined, quiet, and fuel-efficient. The Avalon Hybrid pairs a premium interior with eco-conscious performance for a seamless ride.',
-    alcoholFriendly: true,
+    alcoholFriendly: false,
     hasWifi: false,
   },
   {
