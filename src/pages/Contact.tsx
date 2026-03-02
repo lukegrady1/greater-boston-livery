@@ -81,8 +81,8 @@ const faqSchema = schemaToString(
       answer: 'Several vehicles in our fleet include complimentary WiFi, including the Mercedes-Benz Sprinter Van and the 36 Passenger Mini Coach. WiFi availability is listed on each vehicle on our Fleet page.',
     },
     {
-      question: 'Is Greater Boston Livery the same as Greater Boston Coach?',
-      answer: 'Yes. Greater Boston Livery was formerly known as Greater Boston Coach. We rebranded to reflect our expanded fleet and elevated service standard. Our team, ownership, and commitment to excellence remain the same since 2008.',
+      question: 'How long has Greater Boston Livery been in business?',
+      answer: 'Greater Boston Livery has been serving the Greater Boston area since 2015. Over that time, we\'ve built a reputation for punctuality, discretion, and genuine hospitality across thousands of rides.',
     },
   ])
 )

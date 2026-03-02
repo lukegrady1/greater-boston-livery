@@ -46,7 +46,7 @@ export function Footer() {
               <p className="font-body text-xs tracking-[0.3em] uppercase text-gold">Livery</p>
             </div>
             <p className="font-body text-sm text-silver/50 leading-relaxed mb-6">
-              Formerly Greater Boston Coach. Premium chauffeured transportation serving Greater Boston, Cape Cod, South Shore, North Shore, and New York City. Available 24/7/365.
+              Premium chauffeured transportation serving Greater Boston, Cape Cod, South Shore, North Shore, and New York City. Available 24/7/365.
             </p>
             <div className="flex items-center gap-3">
               <a href="https://www.facebook.com/GreaterBostonLivery/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="p-2 border border-white/10 text-silver/40 hover:text-gold hover:border-gold transition-colors">
@@ -114,9 +114,6 @@ export function Footer() {
           <div className="space-y-1">
             <p className="font-body text-xs text-silver/30">
               © {new Date().getFullYear()} Greater Boston Livery. All rights reserved.
-            </p>
-            <p className="font-body text-xs text-silver/20">
-              Formerly operating as Greater Boston Coach.
             </p>
             <p className="font-body text-xs text-silver/20">
               Designed & built by{' '}

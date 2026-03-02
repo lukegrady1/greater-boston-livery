@@ -243,19 +243,19 @@ export function Home() {
           <RevealOnScroll direction="left">
             <p className="label-sm mb-6">Our Story</p>
             <h2 className="heading-lg text-cream mb-6">
-              From Greater Boston Coach<br />
-              to <span className="gold-gradient">Greater Boston Livery</span>
+              Serving Greater Boston<br />
+              <span className="gold-gradient">Since 2015</span>
             </h2>
             <div className="divider-gold mb-8" />
             <div className="space-y-4 font-body text-silver/60 leading-relaxed">
               <p>
-                We've been serving the Greater Boston area since 2008 under the name Greater Boston Coach — building a reputation for punctuality, discretion, and genuine hospitality that no app can replicate.
+                Greater Boston Livery was built on a straightforward belief: that chauffeured transportation should feel as seamless as it looks. Since 2015, we've been earning that trust one ride at a time.
               </p>
               <p>
-                Our new name, Greater Boston Livery, reflects the elevated standard our clients have always known: a full-service, professionally staffed fleet that goes beyond transportation to deliver an experience.
+                What began as a small operation has grown into a full-service luxury fleet — professionally staffed and available around the clock — while maintaining the personal touch and attention to detail that define us.
               </p>
               <p>
-                The name changes. The standard doesn't.
+                The fleet grows. The standard doesn't change.
               </p>
             </div>
             <div className="mt-8">

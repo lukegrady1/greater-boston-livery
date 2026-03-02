@@ -18,12 +18,12 @@ export function Team() {
     <PageTransition>
       <Helmet>
         <title>Meet the Team | Greater Boston Livery</title>
-        <meta name="description" content="Meet the people behind Greater Boston Livery — led by founder John Grady, our team has provided premier chauffeured transportation throughout Greater Boston since 2008." />
+        <meta name="description" content="Meet the people behind Greater Boston Livery — led by founder John Grady, our team has provided premier chauffeured transportation throughout Greater Boston since 2015." />
         <link rel="canonical" href={`${SITE_URL}/team`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_URL}/team`} />
         <meta property="og:title" content="Meet the Team | Greater Boston Livery" />
-        <meta property="og:description" content="Meet the people behind Greater Boston Livery — led by founder John Grady, our team has served Greater Boston since 2008." />
+        <meta property="og:description" content="Meet the people behind Greater Boston Livery — led by founder John Grady, our team has served Greater Boston since 2015." />
         <meta property="og:image" content={OG_IMAGE_URL} />
         <meta property="og:site_name" content="Greater Boston Livery" />
       </Helmet>
@@ -86,7 +86,7 @@ export function Team() {
             <div className="divider-gold mb-8" />
             <div className="space-y-4 font-body text-navy/60 leading-relaxed">
               <p>
-                John Grady founded Greater Boston Coach in 2008 with a straightforward mission: deliver the kind of chauffeured transportation that Greater Boston's executives, families, and event planners could genuinely rely on.
+                John Grady founded Greater Boston Livery in 2015 with a straightforward mission: deliver the kind of chauffeured transportation that Greater Boston's executives, families, and event planners could genuinely rely on.
               </p>
               <p>
                 Over 15 years later, that mission hasn't changed. What began as a small operation has grown into a full-service luxury fleet — now operating under the name Greater Boston Livery — while maintaining the personal touch and attention to detail that John built the business on.

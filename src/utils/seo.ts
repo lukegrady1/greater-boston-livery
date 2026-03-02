@@ -16,7 +16,6 @@ export function buildLocalBusinessSchema(reviewCount = 8) {
     '@type': ['LocalBusiness', 'LimousineParkingAndTaxis'],
     '@id': `${SITE_URL}/#business`,
     name: BUSINESS_NAME,
-    alternateName: 'Greater Boston Coach',
     description:
       'Greater Boston Livery offers premium chauffeured transportation for airport transfers, corporate travel, weddings, and special occasions throughout Greater Boston and New England.',
     url: SITE_URL,
@@ -35,7 +34,7 @@ export function buildLocalBusinessSchema(reviewCount = 8) {
     ],
     hasMap: 'https://maps.google.com/?q=Boston,MA',
     sameAs: [FACEBOOK_URL],
-    foundingDate: '2008',
+    foundingDate: '2015',
     knowsAbout: [
       'Airport Transfers',
       'Corporate Transportation',

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { getLenis } from '@/hooks/useLenis'
 import { Helmet } from 'react-helmet-async'
 import {
   buildBreadcrumbSchema,
@@ -158,7 +159,13 @@ export function Fleet() {
 
   function selectCategory(value: Category) {
     setActive(value)
-    gridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    if (!gridRef.current) return
+    const lenis = getLenis()
+    if (lenis) {
+      lenis.scrollTo(gridRef.current, { offset: -144, duration: 0.8 })
+    } else {
+      gridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   const filtered = active === 'all'
