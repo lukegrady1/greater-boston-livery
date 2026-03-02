@@ -11,6 +11,7 @@ import { Reviews } from '@/pages/Reviews'
 import { Contact } from '@/pages/Contact'
 import { Team } from '@/pages/Team'
 import { ServiceDetail } from '@/pages/ServiceDetail'
+import { NotFound } from '@/pages/NotFound'
 import { useLenis } from '@/hooks/useLenis'
 
 function NoiseOverlay() {
@@ -31,6 +32,7 @@ function AnimatedRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/team" element={<Team />} />
         <Route path="/services/:id" element={<ServiceDetail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   )

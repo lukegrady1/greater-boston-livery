@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Phone } from 'lucide-react'
-import { SITE_URL } from '@/utils/seo'
+import { SITE_URL, OG_IMAGE_URL } from '@/utils/seo'
 import { PageTransition } from '@/components/motion/PageTransition'
 import { RevealOnScroll } from '@/components/motion/RevealOnScroll'
 import { StaggerChildren, StaggerItem } from '@/components/motion/StaggerChildren'
@@ -20,6 +20,12 @@ export function Team() {
         <title>Meet the Team | Greater Boston Livery</title>
         <meta name="description" content="Meet the people behind Greater Boston Livery — led by founder John Grady, our team has provided premier chauffeured transportation throughout Greater Boston since 2008." />
         <link rel="canonical" href={`${SITE_URL}/team`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_URL}/team`} />
+        <meta property="og:title" content="Meet the Team | Greater Boston Livery" />
+        <meta property="og:description" content="Meet the people behind Greater Boston Livery — led by founder John Grady, our team has served Greater Boston since 2008." />
+        <meta property="og:image" content={OG_IMAGE_URL} />
+        <meta property="og:site_name" content="Greater Boston Livery" />
       </Helmet>
 
       {/* Hero */}

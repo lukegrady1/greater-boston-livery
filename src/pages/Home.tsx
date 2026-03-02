@@ -6,6 +6,7 @@ import {
   buildBreadcrumbSchema,
   schemaToString,
   SITE_URL,
+  OG_IMAGE_URL,
 } from '@/utils/seo'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Shield, Clock, Star, Phone, Plane, Briefcase, Heart, MapPin } from 'lucide-react'
@@ -55,6 +56,11 @@ function HeroSection() {
       {/* Content */}
       <div className="relative z-10 section-padding w-full">
         <div className="max-w-3xl">
+          {/* Keyword-rich H1 for search engines — visually hidden, preserved for screen readers */}
+          <h1 className="sr-only">
+            Boston's Premier Chauffeured Transportation Service | Airport Transfers, Corporate Travel &amp; Wedding Car Service | Greater Boston Livery
+          </h1>
+
           {/* Label */}
           <motion.p
             className="label-sm mb-6"
@@ -65,8 +71,8 @@ function HeroSection() {
             Greater Boston's Premier Chauffeured Service
           </motion.p>
 
-          {/* Main heading — staggered word reveal */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-cream font-medium leading-none mb-4">
+          {/* Visual display heading — aria-hidden since the sr-only H1 above carries semantic meaning */}
+          <p aria-hidden="true" className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-cream font-medium leading-none mb-4">
             {titleWords.map((word, wi) => (
               <span key={word} className="block overflow-hidden pb-4">
                 <motion.span
@@ -87,7 +93,7 @@ function HeroSection() {
                 </motion.span>
               </span>
             ))}
-          </h1>
+          </p>
 
           {/* Subheading */}
           <motion.p
@@ -141,7 +147,7 @@ function HeroSection() {
   )
 }
 
-const localBusinessSchema = schemaToString(buildLocalBusinessSchema())
+const localBusinessSchema = schemaToString(buildLocalBusinessSchema(reviews.length))
 const webSiteSchema = schemaToString(buildWebSiteSchema())
 const breadcrumbSchema = schemaToString(buildBreadcrumbSchema([{ name: 'Home', href: '/' }]))
 
@@ -157,7 +163,7 @@ export function Home() {
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:title" content="Greater Boston Livery | Premium Chauffeured Transportation" />
         <meta property="og:description" content="Premier chauffeured transportation for airport transfers, corporate travel, weddings and events throughout Greater Boston and New England." />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Greater Boston Livery" />

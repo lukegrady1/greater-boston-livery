@@ -6,6 +6,7 @@ import {
   SITE_URL,
   BUSINESS_NAME,
   BOOKING_URL,
+  OG_IMAGE_URL,
 } from '@/utils/seo'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Wifi, Users, Wine } from 'lucide-react'
@@ -174,7 +175,7 @@ export function Fleet() {
         <meta property="og:url" content={`${SITE_URL}/fleet`} />
         <meta property="og:title" content="Our Luxury Fleet | Greater Boston Livery" />
         <meta property="og:description" content="Browse our full fleet: sedans, SUVs, Mercedes Sprinters, motor coaches, and stretch limousines. Available 24/7 throughout Greater Boston." />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
         <script type="application/ld+json">{vehicleListSchema}</script>
         <script type="application/ld+json">{fleetBreadcrumb}</script>
       </Helmet>

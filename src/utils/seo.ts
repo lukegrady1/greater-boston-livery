@@ -1,5 +1,6 @@
 // ─── Business constants ────────────────────────────────────────────────────
 export const SITE_URL = 'https://greaterbostonlivery.com'
+export const OG_IMAGE_URL = `${SITE_URL}/boston.PNG`
 export const BUSINESS_NAME = 'Greater Boston Livery'
 export const PHONE = '+18554254661'
 export const PHONE_DISPLAY = '(855) 425-4661'
@@ -9,7 +10,7 @@ export const FACEBOOK_URL = 'https://www.facebook.com/GreaterBostonLivery/'
 export const LOGO_URL = `${SITE_URL}/gbl_logo.PNG`
 
 // ─── LocalBusiness schema ─────────────────────────────────────────────────
-export function buildLocalBusinessSchema() {
+export function buildLocalBusinessSchema(reviewCount = 8) {
   return {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'LimousineParkingAndTaxis'],
@@ -45,7 +46,7 @@ export function buildLocalBusinessSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '8',
+      reviewCount: String(reviewCount),
       bestRating: '5',
       worstRating: '1',
     },

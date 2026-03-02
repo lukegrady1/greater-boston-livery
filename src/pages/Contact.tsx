@@ -8,6 +8,7 @@ import {
   SITE_URL,
   PHONE_DISPLAY,
   BOOKING_URL,
+  OG_IMAGE_URL,
 } from '@/utils/seo'
 import { PageTransition } from '@/components/motion/PageTransition'
 import { RevealOnScroll } from '@/components/motion/RevealOnScroll'
@@ -104,7 +105,7 @@ export function Contact() {
         <meta property="og:url" content={`${SITE_URL}/contact`} />
         <meta property="og:title" content="Book a Ride | Greater Boston Livery" />
         <meta property="og:description" content="Book online or call (855) 425-4661. Airport transfers, corporate travel, weddings, and special occasions — available 24/7 in Greater Boston." />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
         <script type="application/ld+json">{contactLocalBusiness}</script>
         <script type="application/ld+json">{contactPageSchema}</script>
         <script type="application/ld+json">{faqSchema}</script>

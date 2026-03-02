@@ -5,6 +5,7 @@ import {
   buildBreadcrumbSchema,
   schemaToString,
   SITE_URL,
+  OG_IMAGE_URL,
 } from '@/utils/seo'
 import { PageTransition } from '@/components/motion/PageTransition'
 import { RevealOnScroll } from '@/components/motion/RevealOnScroll'
@@ -57,7 +58,7 @@ export function Reviews() {
         <meta property="og:url" content={`${SITE_URL}/reviews`} />
         <meta property="og:title" content={`${avgRating}-Star Reviews | Greater Boston Livery`} />
         <meta property="og:description" content={`${reviews.length} verified 5-star reviews from corporate executives, wedding couples, and travelers. Boston's premier chauffeured service.`} />
-        <meta property="og:image" content={`${SITE_URL}/gbl_logo.PNG`} />
+        <meta property="og:image" content={OG_IMAGE_URL} />
         <script type="application/ld+json">{reviewSchema}</script>
         <script type="application/ld+json">{reviewsBreadcrumb}</script>
       </Helmet>
