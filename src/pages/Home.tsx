@@ -243,7 +243,7 @@ export function Home() {
           <RevealOnScroll direction="left">
             <p className="label-sm mb-6">Our Story</p>
             <h2 className="heading-lg text-cream mb-6">
-              Serving Greater Boston<br />
+              Serving Greater Boston & Beyond<br />
               <span className="gold-gradient">Since 2013</span>
             </h2>
             <div className="divider-gold mb-8" />
@@ -253,6 +253,9 @@ export function Home() {
               </p>
               <p>
                 What began as a small operation has grown into a full-service luxury fleet — professionally staffed and available around the clock — while maintaining the personal touch and attention to detail that define us.
+              </p>
+              <p>
+                Through our vast network of global affiliates, we arrange first-class ground transportation for passengers anywhere in the world.
               </p>
               <p>
                 The fleet grows. The standard doesn't change.

@@ -89,7 +89,7 @@ export function Team() {
                 John Grady founded Greater Boston Livery in 2013 with a straightforward mission: deliver the kind of chauffeured transportation that Greater Boston's executives, families, and event planners could genuinely rely on.
               </p>
               <p>
-                Over 15 years later, that mission hasn't changed. What began as a small operation has grown into a full-service luxury fleet — now operating under the name Greater Boston Livery — while maintaining the personal touch and attention to detail that John built the business on.
+                Over a decade later, that mission hasn't changed. What began as a small operation has grown into a full-service luxury fleet — now operating under the name Greater Boston Livery — while maintaining the personal touch and attention to detail that John built the business on. Through a vast network of global affiliates, Greater Boston Livery also arranges chauffeured transportation for passengers anywhere in the world.
               </p>
               <p>
                 John is hands-on in every aspect of the business, from fleet maintenance to client relationships. His standard is simple: every client should feel like their ride is the most important one of the day.
