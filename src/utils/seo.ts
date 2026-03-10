@@ -34,7 +34,7 @@ export function buildLocalBusinessSchema(reviewCount = 8) {
     ],
     hasMap: 'https://maps.google.com/?q=Boston,MA',
     sameAs: [FACEBOOK_URL],
-    foundingDate: '2015',
+    foundingDate: '2013',
     knowsAbout: [
       'Airport Transfers',
       'Corporate Transportation',

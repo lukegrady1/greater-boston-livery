@@ -244,12 +244,12 @@ export function Home() {
             <p className="label-sm mb-6">Our Story</p>
             <h2 className="heading-lg text-cream mb-6">
               Serving Greater Boston<br />
-              <span className="gold-gradient">Since 2015</span>
+              <span className="gold-gradient">Since 2013</span>
             </h2>
             <div className="divider-gold mb-8" />
             <div className="space-y-4 font-body text-silver/60 leading-relaxed">
               <p>
-                Greater Boston Livery was built on a straightforward belief: that chauffeured transportation should feel as seamless as it looks. Since 2015, we've been earning that trust one ride at a time.
+                Greater Boston Livery was built on a straightforward belief: that chauffeured transportation should feel as seamless as it looks. Since 2013, we've been earning that trust one ride at a time.
               </p>
               <p>
                 What began as a small operation has grown into a full-service luxury fleet — professionally staffed and available around the clock — while maintaining the personal touch and attention to detail that define us.

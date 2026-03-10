@@ -82,7 +82,7 @@ const faqSchema = schemaToString(
     },
     {
       question: 'How long has Greater Boston Livery been in business?',
-      answer: 'Greater Boston Livery has been serving the Greater Boston area since 2015. Over that time, we\'ve built a reputation for punctuality, discretion, and genuine hospitality across thousands of rides.',
+      answer: 'Greater Boston Livery has been serving the Greater Boston area since 2013. Over that time, we\'ve built a reputation for punctuality, discretion, and genuine hospitality across thousands of rides.',
     },
   ])
 )
