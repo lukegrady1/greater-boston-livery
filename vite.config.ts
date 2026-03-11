@@ -4,9 +4,10 @@ import path from 'path'
 import 'vite-react-ssg'
 
 export default defineConfig({
-  // Use `npm run build` for GitHub Pages (base: /greater-boston-livery/)
-  // Use `npm run build:prod` for production at greaterbostonlivery.com (base: /)
-  base: '/greater-boston-livery/',
+  // VITE_BASE_URL env var sets the base path:
+  //   npm run build      → GitHub Pages (/greater-boston-livery/)
+  //   npm run build:prod → Production (/)
+  base: process.env.VITE_BASE_URL || '/greater-boston-livery/',
   plugins: [react()],
   resolve: {
     alias: {

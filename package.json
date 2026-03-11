@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite-react-ssg build",
-    "build:prod": "tsc -b && vite-react-ssg build --base /",
+    "build:prod": "tsc -b && vite-react-ssg build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

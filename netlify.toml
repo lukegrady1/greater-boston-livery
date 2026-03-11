@@ -2,6 +2,10 @@
   command = "npm run build:prod"
   publish = "dist"
 
+[build.environment]
+  VITE_BASE_URL = "/"
+
+# Fallback for client-side routing (only fires when no static file matches)
 [[redirects]]
   from = "/*"
   to = "/index.html"
