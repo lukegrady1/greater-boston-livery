@@ -1,9 +1,12 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { Outlet } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import type { RouteRecord } from 'vite-react-ssg'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { CustomCursor } from '@/components/ui/CustomCursor'
+import { useLenis } from '@/hooks/useLenis'
 import { Home } from '@/pages/Home'
 import { Fleet } from '@/pages/Fleet'
 import { Services } from '@/pages/Services'
@@ -12,55 +15,63 @@ import { Contact } from '@/pages/Contact'
 import { Team } from '@/pages/Team'
 import { ServiceDetail } from '@/pages/ServiceDetail'
 import { NotFound } from '@/pages/NotFound'
-import { useLenis } from '@/hooks/useLenis'
 
 function NoiseOverlay() {
   return <div className="noise-overlay" aria-hidden="true" />
 }
 
-function AnimatedRoutes() {
-  const location = useLocation()
+function useHasFinePointer() {
+  const [hasFinePointer, setHasFinePointer] = useState(false)
+  useEffect(() => {
+    setHasFinePointer(window.matchMedia('(pointer: fine)').matches)
+  }, [])
+  return hasFinePointer
+}
+
+function Layout() {
+  const hasFinePointer = useHasFinePointer()
   useLenis()
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/fleet" element={<Fleet />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/reviews" element={<Reviews />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/services/:id" element={<ServiceDetail />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </AnimatePresence>
+    <HelmetProvider>
+      <div className="relative min-h-screen">
+        <ScrollToTop />
+        <NoiseOverlay />
+        {hasFinePointer && <CustomCursor />}
+        <Navbar />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </HelmetProvider>
   )
 }
 
-// Only show custom cursor on devices with a fine pointer (mouse/trackpad), not touchscreens
-const hasFinePointer =
-  typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches
-
-function Layout() {
-  return (
-    <div className="relative min-h-screen">
-      <ScrollToTop />
-      <NoiseOverlay />
-      {hasFinePointer && <CustomCursor />}
-      <Navbar />
-      <main>
-        <AnimatedRoutes />
-      </main>
-      <Footer />
-    </div>
-  )
-}
-
-export default function App() {
-  return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <Layout />
-    </BrowserRouter>
-  )
-}
+export const routes: RouteRecord[] = [
+  {
+    path: '/',
+    element: <Layout />,
+    entry: 'src/App.tsx',
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'fleet', element: <Fleet /> },
+      { path: 'services', element: <Services /> },
+      { path: 'reviews', element: <Reviews /> },
+      { path: 'contact', element: <Contact /> },
+      { path: 'team', element: <Team /> },
+      {
+        path: 'services/:id',
+        element: <ServiceDetail />,
+        getStaticPaths: () => [
+          'services/airport',
+          'services/corporate',
+          'services/weddings',
+          'services/roadshows',
+          'services/nightlife',
+        ],
+      },
+      { path: '*', element: <NotFound /> },
+    ],
+  },
+]
