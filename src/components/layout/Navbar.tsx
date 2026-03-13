@@ -48,6 +48,8 @@ export function Navbar() {
             <img
               src={`${import.meta.env.BASE_URL}gbl_logo.webp`}
               alt="Greater Boston Livery"
+              width={243}
+              height={134}
               className="h-16 w-auto object-contain"
             />
           </Link>
