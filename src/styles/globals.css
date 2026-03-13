@@ -60,6 +60,17 @@
     @apply hover:gap-4;
   }
 
+  /* Accessible contrast overrides for light backgrounds */
+  .bg-cream .label-sm {
+    color: rgb(10 25 47 / 0.7);
+  }
+  .bg-cream .btn-ghost {
+    color: rgb(10 25 47 / 0.7);
+  }
+  .bg-cream .btn-ghost:hover {
+    color: rgb(10 25 47 / 1);
+  }
+
   .heading-display {
     @apply font-display text-4xl md:text-5xl lg:text-6xl font-medium leading-tight;
   }
