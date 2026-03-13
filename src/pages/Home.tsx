@@ -45,7 +45,7 @@ function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src={`${import.meta.env.BASE_URL}boston.PNG`}
+          src={`${import.meta.env.BASE_URL}boston.webp`}
           alt="Boston city skyline at night"
           className="w-full h-full object-cover"
         />
@@ -272,7 +272,7 @@ export function Home() {
             <div className="relative">
               <div className="w-full aspect-[4/5] bg-white flex items-center justify-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}gbl_logo.PNG`}
+                  src={`${import.meta.env.BASE_URL}gbl_logo.webp`}
                   alt="Greater Boston Livery"
                   className="w-2/3 object-contain"
                 />

@@ -63,7 +63,7 @@ export function Team() {
             <div className="relative">
               <div className="aspect-[4/5] bg-navy/5 border border-silver flex items-center justify-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}gbl_logo.PNG`}
+                  src={`${import.meta.env.BASE_URL}gbl_logo.webp`}
                   alt="Greater Boston Livery"
                   className="w-2/3 object-contain"
                 />

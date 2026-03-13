@@ -1,13 +1,13 @@
 // ─── Business constants ────────────────────────────────────────────────────
 export const SITE_URL = 'https://greaterbostonlivery.com'
-export const OG_IMAGE_URL = `${SITE_URL}/boston.PNG`
+export const OG_IMAGE_URL = `${SITE_URL}/boston.webp`
 export const BUSINESS_NAME = 'Greater Boston Livery'
 export const PHONE = '+18554254661'
 export const PHONE_DISPLAY = '(855) 425-4661'
 export const EMAIL = 'info@greaterbostonlivery.com'
 export const BOOKING_URL = 'https://customer.moovs.app/greater-boston-coach/request/new'
 export const FACEBOOK_URL = 'https://www.facebook.com/GreaterBostonLivery/'
-export const LOGO_URL = `${SITE_URL}/gbl_logo.PNG`
+export const LOGO_URL = `${SITE_URL}/gbl_logo.webp`
 
 // ─── LocalBusiness schema ─────────────────────────────────────────────────
 export function buildLocalBusinessSchema(reviewCount = 8) {
