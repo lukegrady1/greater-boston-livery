@@ -47,6 +47,7 @@ function HeroSection() {
         <img
           src={`${import.meta.env.BASE_URL}boston.webp`}
           alt="Boston city skyline at night"
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy/70 to-transparent" />
