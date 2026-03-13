@@ -17,6 +17,15 @@ export default defineConfig({
   ssgOptions: {
     dirStyle: 'nested',
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/framer-motion')) return 'vendor-motion'
+        },
+      },
+    },
+  },
   ssr: {
     noExternal: ['react-helmet-async'],
   },
