@@ -307,7 +307,9 @@ export function Home() {
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {featuredVehicles.map((vehicle) => (
             <StaggerItem key={vehicle.id}>
-              <VehicleCard vehicle={vehicle} />
+              <Link to="/fleet" className="block">
+                <VehicleCard vehicle={vehicle} />
+              </Link>
             </StaggerItem>
           ))}
         </StaggerChildren>

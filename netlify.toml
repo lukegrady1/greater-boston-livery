@@ -1,12 +1,9 @@
 [build]
-  command = "npm run build:prod"
+  command = "npm run build:prod && cp dist/index.html dist/404.html"
   publish = "dist"
 
 [build.environment]
   VITE_BASE_URL = "/"
 
-# Fallback for client-side routing (only fires when no static file matches)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# All pages are pre-rendered by SSG — no catch-all rewrite needed.
+# Netlify auto-serves 404.html for unknown URLs.
