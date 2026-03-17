@@ -9,7 +9,7 @@ export const vehicles: Vehicle[] = [
     capacity: 3,
     image: `${import.meta.env.BASE_URL}chrysler_300.webp`,
     features: ['AC', 'Black / AWD'],
-    description: 'A bold and commanding sedan. The Chrysler 300 in all-wheel drive delivers a smooth, confident ride for executive transfers and special occasions.',
+    description: 'A bold and commanding sedan. The Chrysler 300 in all-wheel drive comfortably fits 3 passengers but can accommodate up to 4, delivering a smooth, confident ride for executive transfers and special occasions.',
     alcoholFriendly: false,
     hasWifi: false,
   },
@@ -49,7 +49,7 @@ export const vehicles: Vehicle[] = [
   // SUVs
   {
     id: 'jeep-wagoneer',
-    name: '2024 Jeep Wagoneer L',
+    name: 'Jeep Wagoneer L',
     category: 'suv',
     capacity: 7,
     image: `${import.meta.env.BASE_URL}2024_jeep_wagoneer_l.webp`,
@@ -70,8 +70,19 @@ export const vehicles: Vehicle[] = [
     hasWifi: false,
   },
   {
+    id: 'gmc-yukon',
+    name: 'GMC Yukon',
+    category: 'suv',
+    capacity: 6,
+    image: `${import.meta.env.BASE_URL}yukon.webp`,
+    features: ['AC', 'Spacious Interior', 'Premium Ride'],
+    description: 'The GMC Yukon delivers bold styling and a refined interior with captain seats for up to 6 passengers. A commanding choice for corporate travel, airport transfers, and special events.',
+    alcoholFriendly: false,
+    hasWifi: false,
+  },
+  {
     id: 'ford-expedition',
-    name: '2021 Ford Expedition MAX XLT',
+    name: 'Ford Expedition MAX XLT',
     category: 'suv',
     capacity: 7,
     image: `${import.meta.env.BASE_URL}2021_ford_expedition_max_xlt.webp`,
