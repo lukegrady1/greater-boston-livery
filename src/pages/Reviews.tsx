@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import { Star } from 'lucide-react'
 import {
   buildReviewPageSchema,
@@ -50,7 +50,7 @@ const reviewsBreadcrumb = schemaToString(
 export function Reviews() {
   return (
     <PageTransition>
-      <Helmet>
+      <Head>
         <title>Client Reviews | 5-Star Chauffeured Service Boston | Greater Boston Livery</title>
         <meta name="description" content={`Greater Boston Livery has earned a perfect ${avgRating}-star rating from ${reviews.length} verified clients. Read reviews from corporate executives, wedding couples, and frequent travelers.`} />
         <link rel="canonical" href={`${SITE_URL}/reviews`} />
@@ -61,7 +61,7 @@ export function Reviews() {
         <meta property="og:image" content={OG_IMAGE_URL} />
         <script type="application/ld+json">{reviewSchema}</script>
         <script type="application/ld+json">{reviewsBreadcrumb}</script>
-      </Helmet>
+      </Head>
 
       {/* Hero */}
       <section className="bg-navy pt-40 pb-20 section-padding">

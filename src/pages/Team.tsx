@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Phone } from 'lucide-react'
 import { SITE_URL, OG_IMAGE_URL } from '@/utils/seo'
@@ -16,7 +16,7 @@ const values = [
 export function Team() {
   return (
     <PageTransition>
-      <Helmet>
+      <Head>
         <title>Meet the Team | Greater Boston Livery</title>
         <meta name="description" content="Meet the people behind Greater Boston Livery — led by founder John Grady, our team has provided premier chauffeured transportation throughout Greater Boston since 2013." />
         <link rel="canonical" href={`${SITE_URL}/team`} />
@@ -26,7 +26,7 @@ export function Team() {
         <meta property="og:description" content="Meet the people behind Greater Boston Livery — led by founder John Grady, our team has served Greater Boston since 2013." />
         <meta property="og:image" content={OG_IMAGE_URL} />
         <meta property="og:site_name" content="Greater Boston Livery" />
-      </Helmet>
+      </Head>
 
       {/* Hero */}
       <section className="bg-navy pt-40 pb-20 section-padding relative overflow-hidden">

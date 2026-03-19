@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import { ArrowRight, Phone, Mail, MapPin, Clock } from 'lucide-react'
 import {
   buildLocalBusinessSchema,
@@ -97,7 +97,7 @@ const contactBreadcrumb = schemaToString(
 export function Contact() {
   return (
     <PageTransition>
-      <Helmet>
+      <Head>
         <title>Book a Ride | Contact Greater Boston Livery | (855) 425-4661</title>
         <meta name="description" content="Reserve your premium chauffeured ride with Greater Boston Livery. Book online instantly or call 1-855-GB-LIMO (855) 425-4661. Airport transfers, corporate travel, and weddings throughout Boston and New England." />
         <link rel="canonical" href={`${SITE_URL}/contact`} />
@@ -110,7 +110,7 @@ export function Contact() {
         <script type="application/ld+json">{contactPageSchema}</script>
         <script type="application/ld+json">{faqSchema}</script>
         <script type="application/ld+json">{contactBreadcrumb}</script>
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-navy">
         {/* Hero */}

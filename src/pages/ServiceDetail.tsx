@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import { useState } from 'react'
 import { ArrowRight, Check, Phone, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -90,7 +90,7 @@ export function ServiceDetail() {
 
   return (
     <PageTransition>
-      <Helmet>
+      <Head>
         <title>{service.metaTitle ?? `${service.title} | Greater Boston Livery`}</title>
         <meta
           name="description"
@@ -105,7 +105,7 @@ export function ServiceDetail() {
         <script type="application/ld+json">{breadcrumbSchema}</script>
         <script type="application/ld+json">{serviceSchema}</script>
         {faqSchema && <script type="application/ld+json">{faqSchema}</script>}
-      </Helmet>
+      </Head>
 
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[480px] flex items-end overflow-hidden">

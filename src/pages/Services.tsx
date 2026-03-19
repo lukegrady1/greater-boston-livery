@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import {
   buildServiceSchema,
   buildBreadcrumbSchema,
@@ -90,7 +90,7 @@ const servicesBreadcrumb = schemaToString(
 export function Services() {
   return (
     <PageTransition>
-      <Helmet>
+      <Head>
         <title>Airport Transfers, Corporate &amp; Wedding Transportation | Greater Boston Livery</title>
         <meta name="description" content="Greater Boston Livery provides airport car service at Logan, Manchester &amp; T.F. Green, corporate chauffeur service, wedding transportation, roadshows, and special occasions throughout New England." />
         <link rel="canonical" href={`${SITE_URL}/services`} />
@@ -101,7 +101,7 @@ export function Services() {
         <meta property="og:image" content={OG_IMAGE_URL} />
         <script type="application/ld+json">{serviceListSchema}</script>
         <script type="application/ld+json">{servicesBreadcrumb}</script>
-      </Helmet>
+      </Head>
 
       {/* Hero */}
       <section className="bg-navy pt-40 pb-20 section-padding relative overflow-hidden">

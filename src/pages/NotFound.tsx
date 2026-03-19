@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import { ArrowRight, Phone } from 'lucide-react'
 import { SITE_URL, BOOKING_URL } from '@/utils/seo'
 import { PageTransition } from '@/components/motion/PageTransition'
@@ -8,12 +8,12 @@ import { RevealOnScroll } from '@/components/motion/RevealOnScroll'
 export function NotFound() {
   return (
     <PageTransition>
-      <Helmet>
+      <Head>
         <title>Page Not Found | Greater Boston Livery</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to Greater Boston Livery's homepage or browse our fleet and services." />
         <link rel="canonical" href={`${SITE_URL}/404`} />
         <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      </Head>
 
       <section className="bg-navy min-h-screen flex items-center section-padding relative overflow-hidden">
         {/* Background texture */}

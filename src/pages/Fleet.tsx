@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { getLenis } from '@/hooks/useLenis'
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import {
   buildBreadcrumbSchema,
   schemaToString,
@@ -174,7 +174,7 @@ export function Fleet() {
 
   return (
     <PageTransition>
-      <Helmet>
+      <Head>
         <title>Luxury Fleet | Sedans, SUVs, Sprinters &amp; Limos | Greater Boston Livery</title>
         <meta name="description" content="Browse Greater Boston Livery's luxury fleet: executive sedans, SUVs, Mercedes Sprinters, mini coaches, 55-passenger motor coaches, party buses, and stretch limousines. Available 24/7 in Boston." />
         <link rel="canonical" href={`${SITE_URL}/fleet`} />
@@ -185,7 +185,7 @@ export function Fleet() {
         <meta property="og:image" content={OG_IMAGE_URL} />
         <script type="application/ld+json">{vehicleListSchema}</script>
         <script type="application/ld+json">{fleetBreadcrumb}</script>
-      </Helmet>
+      </Head>
 
       {/* Hero */}
       <section className="bg-navy pt-40 pb-20 section-padding relative overflow-hidden">

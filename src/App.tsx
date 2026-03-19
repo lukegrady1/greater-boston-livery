@@ -1,6 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
 import type { RouteRecord } from 'vite-react-ssg'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
@@ -34,20 +33,18 @@ function Layout() {
   useLenis()
 
   return (
-    <HelmetProvider>
-      <div className="relative min-h-screen">
-        <ScrollToTop />
-        <NoiseOverlay />
-        {hasFinePointer && <CustomCursor />}
-        <Navbar />
-        <main>
-          <Suspense>
-            <Outlet />
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
-    </HelmetProvider>
+    <div className="relative min-h-screen">
+      <ScrollToTop />
+      <NoiseOverlay />
+      {hasFinePointer && <CustomCursor />}
+      <Navbar />
+      <main>
+        <Suspense>
+          <Outlet />
+        </Suspense>
+      </main>
+      <Footer />
+    </div>
   )
 }
 

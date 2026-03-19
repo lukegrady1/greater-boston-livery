@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import { Link } from 'react-router-dom'
 import {
   buildLocalBusinessSchema,
@@ -18,7 +18,11 @@ import { ReviewCard } from '@/components/shared/ReviewCard'
 import { vehicles } from '@/data/vehicles'
 import { reviews } from '@/data/reviews'
 
-const featuredVehicles = vehicles.slice(0, 3)
+const featuredVehicles = [
+  vehicles.find(v => v.id === 'chrysler-300')!,
+  vehicles.find(v => v.id === 'jeep-wagoneer')!,
+  vehicles.find(v => v.id === 'ford-expedition')!,
+]
 const featuredReviews = reviews.slice(0, 3)
 
 const coreServices = [
@@ -155,7 +159,7 @@ const breadcrumbSchema = schemaToString(buildBreadcrumbSchema([{ name: 'Home', h
 export function Home() {
   return (
     <PageTransition>
-      <Helmet>
+      <Head>
         <title>Greater Boston Livery | Premium Chauffeured Transportation Boston</title>
         <meta name="description" content="Greater Boston Livery offers premier chauffeured transportation for airport transfers, corporate travel, weddings and events throughout Greater Boston and New England. Call (855) 425-4661." />
         <link rel="canonical" href={`${SITE_URL}/`} />
@@ -171,7 +175,7 @@ export function Home() {
         <script type="application/ld+json">{localBusinessSchema}</script>
         <script type="application/ld+json">{webSiteSchema}</script>
         <script type="application/ld+json">{breadcrumbSchema}</script>
-      </Helmet>
+      </Head>
 
       <HeroSection />
 
