@@ -59,10 +59,16 @@ export function Footer() {
           <div>
             <p className="label-sm mb-6">Services</p>
             <ul className="space-y-3">
-              {['Airport Transfers', 'Corporate Travel', 'Weddings & Events', 'Roadshows & Tours', 'Special Occasions'].map((s) => (
-                <li key={s}>
-                  <Link to="/services" className="font-body text-sm text-silver/70 hover:text-gold transition-colors">
-                    {s}
+              {[
+                { label: 'Airport Transfers', slug: 'airport' },
+                { label: 'Corporate Travel', slug: 'corporate' },
+                { label: 'Weddings & Events', slug: 'weddings' },
+                { label: 'Roadshows & Tours', slug: 'roadshows' },
+                { label: 'Special Occasions', slug: 'nightlife' },
+              ].map((s) => (
+                <li key={s.slug}>
+                  <Link to={`/services/${s.slug}`} className="font-body text-sm text-silver/70 hover:text-gold transition-colors">
+                    {s.label}
                   </Link>
                 </li>
               ))}
