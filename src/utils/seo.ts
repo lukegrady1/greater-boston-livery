@@ -1,6 +1,6 @@
 // ─── Business constants ────────────────────────────────────────────────────
 export const SITE_URL = 'https://greaterbostonlivery.com'
-export const OG_IMAGE_URL = `${SITE_URL}/gbl_og.png`
+export const OG_IMAGE_URL = `${SITE_URL}/gbl_og.webp`
 export const BUSINESS_NAME = 'Greater Boston Livery'
 export const PHONE = '+18554254661'
 export const PHONE_DISPLAY = '(855) 425-4661'
